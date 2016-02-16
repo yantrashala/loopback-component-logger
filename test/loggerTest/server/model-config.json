@@ -32,5 +32,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "testModel": {
+    "dataSource": "db",
+    "public": true
   }
 }

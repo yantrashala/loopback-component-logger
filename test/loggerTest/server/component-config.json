@@ -3,11 +3,6 @@
     "mountPath": "/explorer"
   },
   "../../../index": {
-    "loggerConfig": {
-      "logDir": "./log",
-      "fileName": "blink-api",
-      "level": "debug",
-      "appName": "blink-api"
-    }
+    
   }
 }
