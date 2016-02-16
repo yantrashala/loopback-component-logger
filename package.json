@@ -1,0 +1,37 @@
+{
+  "name": "loopback-component-logger",
+  "version": "0.0.1",
+  "description": "Logging component for loopback",
+  "main": "index.js",
+  "scripts": {},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yantrashala/loopback-component-logger"
+  },
+  "dependencies": {
+    "bunyan": "1.5.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0",
+    "loopback": "^2.26.2",
+    "loopback-datasource-juggler": "^2.45.0",
+    "loopback-boot": "^2.6.5",
+    "run-sequence": "^1.1.5",
+    "supertest": "^1.1.0",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "loopback-component-explorer": "^2.1.0",
+    "serve-favicon": "^2.0.1"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ]
+}
