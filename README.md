@@ -44,7 +44,7 @@ inherit the log level from root.
 
 ```js
 
-var logger = require('../../../../index')('TestModel');
+var logger = require('loopback-component-logger')('TestModel');
 module.exports = function(TestModel) {
     logger.debug('Initializing TestModel');
 };
