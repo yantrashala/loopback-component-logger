@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Logging component for loopback",
   "main": "index.js",
   "scripts": {},
