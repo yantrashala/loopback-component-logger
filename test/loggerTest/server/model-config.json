@@ -36,5 +36,13 @@
   "testModel": {
     "dataSource": "db",
     "public": true
+  },
+  "childModel": {
+    "dataSource": "db",
+    "public": true
+  },
+  "weather": {
+    "dataSource": "weatherDS",
+    "public": true
   }
 }

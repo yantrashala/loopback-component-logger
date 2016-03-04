@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-logger",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Logging component for loopback",
   "main": "index.js",
   "scripts": {},
@@ -22,6 +22,7 @@
     "jshint-stylish": "^2.1.0",
     "loopback": "^2.26.2",
     "loopback-datasource-juggler": "^2.45.0",
+    "loopback-connector-rest": "^1.10.2",
     "loopback-boot": "^2.6.5",
     "run-sequence": "^1.1.5",
     "supertest": "^1.1.0",
