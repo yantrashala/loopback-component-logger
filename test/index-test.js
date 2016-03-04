@@ -2,7 +2,7 @@
 
 var chai = require('chai');
 var expect = chai.assert;
-var app = require('./loggerTest/server/server');
+var app = require('./loggerTest');
 var supertest = require('supertest');
 var api = supertest('http://'+app.get('host')+':'+app.get('port'));
 
@@ -27,13 +27,15 @@ describe('server', function () {
                 .expect('Content-Type', /json/)
                 .expect(200, done);
         });
+    });
 
-        it('should Logger model', function (done) {
-            api.get('/')
+    //check if server response correctly
+    describe('Test Log for REST CALL', function () {
+        it('should respond with 200 status code', function (done) {
+            api.get('/api/weather/getWeatherData?city=london')
                 .set('Accept', 'application/json')
                 .expect('Content-Type', /json/)
                 .expect(200, done);
         });
-
     });
 });

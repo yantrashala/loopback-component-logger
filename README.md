@@ -14,7 +14,6 @@ npm install loopback-component-logger
 - Can use of custom bunyan [streams] to create root logger
 - Hook: Basic performance instrumentation for remote execution
 - Hook: Log management API
-- Addition of loopback ctx in all hooked logs in case ctx serializer is provided
 
 # Usage
 
@@ -64,9 +63,8 @@ To add hooks and log management API to [loopback], add configuration to componen
 }
 
 ```
-
-# Logger API usage
-
+Make sure enableHttpContext is set as true in config.json for to allow collection
+ of datasources performance within req/res
 
 # License
 
@@ -74,14 +72,9 @@ To add hooks and log management API to [loopback], add configuration to componen
 
 # Roadmap
 - Additional Unit Test and Coverage
-- Unique identifier for consolidating logs for each request
-- Detail performance logs for function execution
-- Detail performance logs for dataSource calls
 - Integrate with Strongloop Devops tools
 
-
 # See Also
-
 
 - [Loopback][loopback]
 - [bunyan][bunyan]
