@@ -74,6 +74,9 @@ Make sure enableHttpContext is set as true in config.json for to allow collectio
 - Additional Unit Test and Coverage
 - Integrate with Strongloop Devops tools
 
+# Known Issue
+- datasources performance will not recorded at times when loopback context is null. Noticed this issue when a composite called MongoDB followed by REST. Only MongoDB response time was recorded and REST was missing. 
+
 # See Also
 
 - [Loopback][loopback]
