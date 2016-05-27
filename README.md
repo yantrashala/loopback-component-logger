@@ -13,7 +13,7 @@ npm install loopback-component-logger
 - Default logger using [bunyan]
 - Can use of custom bunyan [streams] to create root logger
 - Hook: Basic performance instrumentation for remote execution
-- Hook: Log management API
+- Hook: Log management API (configurable)
 
 # Usage
 
@@ -59,6 +59,7 @@ To add hooks and log management API to [loopback], add configuration to componen
     "mountPath": "/explorer"
   },
   "loopback-component-logger": {
+      "enableAPI" : true
   }
 }
 
@@ -75,7 +76,7 @@ Make sure enableHttpContext is set as true in config.json for to allow collectio
 - Integrate with Strongloop Devops tools
 
 # Known Issue
-- datasources performance will not recorded at times when loopback context is null. Noticed this issue when a composite called MongoDB followed by REST. Only MongoDB response time was recorded and REST was missing. 
+- datasources performance will not recorded at times when loopback context is null. Noticed this issue when a composite called MongoDB followed by REST. Only MongoDB response time was recorded and REST was missing.
 
 # See Also
 

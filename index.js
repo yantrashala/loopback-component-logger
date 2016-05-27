@@ -1,6 +1,6 @@
 'use strict';
 
-var rootLogger;
+var rootLogger=null;
 var defaultLogger = require('./lib/defaultLogger');
 var loopbackHook = require('./lib/loopbackHook');
 
@@ -12,7 +12,8 @@ module.exports = function(app, config) {
     app = app || defaultLogger;
     var hook;
 
-    // check if the app instance is loopback
+    // check if the app instance is loopback. This is called when
+    // the component is getting initialized
     if(app.hasOwnProperty('loopback')){
 
         if(!rootLogger) {
@@ -34,19 +35,17 @@ module.exports = function(app, config) {
                     submodule: moduleName
                 });
                 loggerMap[moduleName] = childLogger;
-                // if loopback app is initialized than add child logger to
-                // logger Model
-                if(componentInitialized)
-                    loopbackHook.addLoggerModel(moduleName,childLogger);
             }
 
             return loggerMap[moduleName];
         } else {
-            // if app is not a string than its a instanec of a
-            // bunyan logger
+            // if app is not a string than its a instance of a
+            // bunyan logger. initialize only once
+            if(!rootLogger) {
+                rootLogger = app;
+                loggerMap['root'] = rootLogger;
+            }
 
-            rootLogger = app;
-            loggerMap['root'] = rootLogger;
             return rootLogger;
         }
     }

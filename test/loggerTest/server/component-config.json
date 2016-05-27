@@ -3,6 +3,6 @@
     "mountPath": "/explorer"
   },
   "../../../index": {
-
+      "enableAPI" : true
   }
 }

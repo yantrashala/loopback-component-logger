@@ -4,20 +4,9 @@ var chai = require('chai');
 var expect = chai.assert;
 var app = require('./loggerTest');
 var supertest = require('supertest');
-var api = supertest('http://'+app.get('host')+':'+app.get('port'));
+var api = supertest(app);
 
 describe('server', function () {
-
-    var serverInstance;
-    //start server
-    before(function () {
-        serverInstance = app.start();
-    });
-
-    //stop server at the end
-    after(function () {
-        serverInstance.close();
-    });
 
     //check if server response correctly
     describe('Test Server status ', function () {
