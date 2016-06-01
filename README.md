@@ -2,11 +2,12 @@
 
 Logging component for [loopback] using [bunyan] logger with additional loopback specific hooks and log management API
 
-# Installation
+[![NPM](https://nodei.co/npm/loopback-component-logger.png?downloads=true)](https://nodei.co/npm/loopback-component-logger/)
 
-```sh
-npm install loopback-component-logger
-```
+ [![NPM](https://nodei.co/npm-dl/loopback-component-logger.png?months=3&height=3)](https://nodei.co/npm/loopback-component-logger/)
+
+ [![Build status](https://img.shields.io/travis/yantrashala/loopback-component-logger/master.svg?style=flat-square)](https://travis-ci.org/yantrashala/loopback-component-logger)
+
 
 # Features
 

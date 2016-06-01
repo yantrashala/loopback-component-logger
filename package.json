@@ -3,7 +3,6 @@
   "version": "0.3.1",
   "description": "Logging component for loopback",
   "main": "index.js",
-  "scripts": {},
   "license": "MIT",
   "repository": {
     "type": "git",
