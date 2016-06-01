@@ -38,7 +38,7 @@
     "public": true
   },
   "childModel": {
-    "dataSource": "db",
+    "dataSource": "mongoDs",
     "public": true
   },
   "weather": {
