@@ -26,7 +26,7 @@ gulp.task('mochaTest', function (cb) {
     .pipe(istanbul()) // Covering files
     .pipe(istanbul.hookRequire()) // Force `require` to return covered files
     .on('finish', function () {
-      gulp.src(['test/index-test.js','test/lib/**/*-test.js'])
+      gulp.src(['test/**/*-test.js'])
         .pipe(mocha({ timeout: 10000 }))
         .pipe(istanbul.writeReports())// Creating the reports after tests runned
         .on('end', function(){

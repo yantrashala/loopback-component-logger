@@ -1,30 +1,40 @@
 'use strict';
 
 var chai = require('chai');
-var expect = chai.assert;
-var app = require('./loggerTest');
+var expect = chai.expect;
 var supertest = require('supertest');
-var api = supertest(app);
+var bunyan = require('bunyan');
+var path = require('path');
 
-describe('server', function () {
+if (require.cache[path.resolve(__dirname + '/../index.js')])
+    delete require.cache[path.resolve(__dirname + '/../index.js')];
 
-    //check if server response correctly
-    describe('Test Server status ', function () {
-        it('should respond with 200 status code', function (done) {
-            api.get('/')
-                .set('Accept', 'application/json')
-                .expect('Content-Type', /json/)
-                .expect(200, done);
-        });
+var logger = require('../index');
+
+describe('Testing Logger initialization', function () {
+
+    it('should give error if initialized with non-bunyan logger',
+                                                            function (done) {
+        var fn = function() {
+                var customObj = {'name':'customLogger'};
+                logger(customObj);
+            };
+        expect(fn).to.throw(TypeError);
+        done();
     });
 
-    //check if server response correctly
-    describe('Test Log for REST CALL', function () {
-        it('should respond with 200 status code', function (done) {
-            api.get('/api/weather/getWeatherData?city=london')
-                .set('Accept', 'application/json')
-                .expect('Content-Type', /json/)
-                .expect(200, done);
-        });
+    it('should use default logger if no logger is provided', function (done) {
+        var a = logger();
+        expect(a).to.be.a('object');
+        expect(a).to.be.an.instanceof(bunyan);
+        expect(a.fields.name).to.equal('defaultLogger');
+        done();
+    });
+
+    it('should maintain the logger instance', function (done) {
+        var log = bunyan.createLogger({name: "myapp"});
+        var a = logger(log);
+        expect(a.fields.name).to.equal('defaultLogger');
+        done();
     });
 });
