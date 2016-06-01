@@ -6,11 +6,15 @@ module.exports = function(TestModel) {
 
     TestModel.findCustom = function(cb) {
         var childModel = TestModel.app.models.childModel;
+        var weather = TestModel.app.models.weather;
         //console.log('result',childModel.name);
         //cb(null,{});
         childModel.find(function(err,result){
-            console.log('result',result);
-            cb(err,result);
+
+            weather.getWeatherData('paris', function(err, weatherData) {
+                result.push(weatherData);
+                cb(err,result);
+            })
         });
     };
 
@@ -20,12 +24,12 @@ module.exports = function(TestModel) {
       verb: 'get'
     },
     returns: {
-      arg: 'testModel',
-      type: 'testModel',
+      arg: 'data',
+      type: 'object',
       root: true
     },
-    description: 'Get Account List By Customer Id',
-    notes: 'Returns Account List for a given id'
+    description: 'Get some custom data',
+    notes: 'Get some custom data'
   });
 
 };
