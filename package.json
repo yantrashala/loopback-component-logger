@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-logger",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Logging component for loopback",
   "main": "index.js",
   "license": "MIT",
