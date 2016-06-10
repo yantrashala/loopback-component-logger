@@ -1,6 +1,9 @@
+
+var bunyan = require('bunyan');
+var rootLogger = bunyan.createLogger({name: 'myAPI', level: 'info'});
+var logger = require('../../../index')(rootLogger);
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-var logger = require('../../../index')();
 var app = module.exports = loopback();
 
 app.start = function() {

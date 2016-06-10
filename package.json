@@ -1,40 +1,46 @@
 {
-  "name": "loopback-component-logger",
-  "version": "0.3.3",
-  "description": "Logging component for loopback",
-  "main": "index.js",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yantrashala/loopback-component-logger"
-  },
-  "dependencies": {
-    "bunyan": "1.5.1",
-    "debug": "^2.2.0"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "gulp": "^3.9.0",
-    "gulp-istanbul": "^0.10.3",
-    "gulp-jshint": "^2.0.0",
-    "gulp-mocha": "^2.2.0",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0",
-    "loopback": "^2.26.2",
-    "loopback-datasource-juggler": "^2.45.0",
-    "loopback-connector-rest": "^1.10.2",
-    "loopback-connector-mongodb": "^1.15.2",
-    "loopback-boot": "^2.6.5",
-    "run-sequence": "^1.1.5",
-    "supertest": "^1.1.0",
-    "compression": "^1.0.3",
-    "cors": "^2.5.2",
-    "loopback-component-explorer": "^2.1.0",
-    "serve-favicon": "^2.0.1"
-  },
-  "files": [
-    "index.js",
-    "lib",
-    "README.md"
-  ]
+    "name": "loopback-component-logger",
+    "version": "0.3.4",
+    "description": "Logging component for loopback",
+    "main": "index.js",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yantrashala/loopback-component-logger"
+    },
+    "dependencies": {
+        "bunyan": "^1.8.1",
+        "debug": "^2.2.0"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "gulp": "^3.9.0",
+        "gulp-istanbul": "^0.10.3",
+        "gulp-jshint": "^2.0.0",
+        "gulp-mocha": "^2.2.0",
+        "jshint": "^2.9.1",
+        "jshint-stylish": "^2.1.0",
+        "loopback": "^2.26.2",
+        "loopback-datasource-juggler": "^2.45.0",
+        "loopback-connector-rest": "^1.10.2",
+        "loopback-connector-mongodb": "^1.15.2",
+        "loopback-boot": "^2.6.5",
+        "run-sequence": "^1.1.5",
+        "supertest": "^1.1.0",
+        "compression": "^1.0.3",
+        "cors": "^2.5.2",
+        "loopback-component-explorer": "^2.1.0",
+        "serve-favicon": "^2.0.1"
+    },
+    "files": [
+        "index.js",
+        "lib",
+        "README.md"
+    ],
+    "contributors": [
+        {
+            "name": "Prashant Bhadauria",
+            "url": "https://github.com/pbhadauria2000"
+        }
+    ]
 }
