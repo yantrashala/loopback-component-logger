@@ -54,7 +54,5 @@ describe('Adding basic performance logs', function () {
             expect(rec).to.have.property('OverallResponseTime');
             done();
         });
-
-
     });
 });

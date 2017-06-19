@@ -8,6 +8,7 @@ Logging component for [loopback] using [bunyan] logger with additional loopback 
 
  [![Build status](https://img.shields.io/travis/yantrashala/loopback-component-logger/master.svg?style=flat-square)](https://travis-ci.org/yantrashala/loopback-component-logger)
 
+### Note: Removing support for connector hook instrumentation given changes with loopback-context.
 
 # Features
 
@@ -65,19 +66,10 @@ To add hooks and log management API to [loopback], add configuration to componen
 }
 
 ```
-Make sure enableHttpContext is set as true in config.json for to allow collection
- of datasources performance within req/res
 
 # License
 
 [MIT](./LICENSE).
-
-# Roadmap
-- Additional Unit Test and Coverage
-- Integrate with Strongloop Devops tools
-
-# Known Issue
-- datasources performance will not recorded at times when loopback context is null. Noticed this issue when a composite called MongoDB followed by REST. Only MongoDB response time was recorded and REST was missing.
 
 # See Also
 
