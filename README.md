@@ -24,6 +24,7 @@ Example _server.js_:
 ```js
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var bunyan = require('bunyan');
 var rootLogger = bunyan.createLogger({name: 'myloopbackAPI'});
 var logger = require('loopback-component-logger')(rootLogger);
 var app = module.exports = loopback();
